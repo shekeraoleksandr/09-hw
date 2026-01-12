@@ -2,6 +2,12 @@ pipeline {
     agent any
 
     stages {
+        stage('Checkout') {
+            steps {
+                echo "Checking out code from GitHub"
+                chekout scm
+            }
+        }
         stage('Cleanup Apache') {
             steps {
                 sh './scripts/clenup-apache.sh'
