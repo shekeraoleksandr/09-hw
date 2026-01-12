@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo "Checking out code from GitHub"
-                chekout scm
+                checkout scm
             }
         }
         stage('Cleanup Apache') {
